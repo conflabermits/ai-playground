@@ -32,7 +32,7 @@ This program uses the `is_prime` function to check if a number is prime and the 
 
 Seems to work fine as-is.
 
-```bash
+```text
 $ ./gpt-primes.py
 Enter the value of n: 5
 Prime numbers upto 5 are: [2, 3, 5]
