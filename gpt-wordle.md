@@ -52,3 +52,21 @@ To use this program, simply run it in a Python interpreter or in a terminal. The
 I hope this helps you solve some Wordle puzzles!
 
 ## Results
+
+First off, it was clear there were some issues with the code. The word list contained 4-letter and 6-letter words despite calling out that it should contain 5-letter words. It checks for "bulls" and "cows", and defines them in the code, but doesn't define them for the user. Plus it doesn't tell the user which letter spots within a word were bulls vs cows. It also doesn't tell the user how many guesses they have left. Finally, it doesn't tell the user if they guessed the same word twice.
+
+On first run, it errored-out:
+
+```text
+$ ./gpt-wordle.py 
+Welcome to Wordle!
+Guess a five-letter word: kiwi
+Traceback (most recent call last):
+  File "/local/git/ai-playground/./gpt-wordle.py", line 37, in <module>
+    main()
+  File "/local/git/ai-playground/./gpt-wordle.py", line 31, in main
+    bulls, cows = check_guess(word, guess)
+  File "/local/git/ai-playground/./gpt-wordle.py", line 15, in check_guess
+    if word[i] == guess[i]:
+IndexError: string index out of range
+```
