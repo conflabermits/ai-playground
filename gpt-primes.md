@@ -45,3 +45,29 @@ The program then loops through all numbers from 2 to the square root of the limi
 I hope this helps! Let me know if you have any questions.
 
 # Results
+
+Not bad. A little slower than Python (most likely from compiling) and lists each number on a new line instead of a single-line array, but it seems to do the work.
+
+```text
+$ go run gpt-primes.go 
+Enter the limit up to which prime numbers are to be found: 
+5
+Prime numbers up to 5 are:
+2
+3
+5
+
+$ go run gpt-primes.go 
+Enter the limit up to which prime numbers are to be found: 
+23
+Prime numbers up to 23 are:
+2
+3
+5
+7
+11
+13
+17
+19
+23
+```
