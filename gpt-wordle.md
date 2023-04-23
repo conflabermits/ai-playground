@@ -8,7 +8,7 @@ can you help me write a python program that helps solve wordle puzzles?
 
 Sure, I can help you with that! Wordle is a popular word puzzle game where players have to guess a five-letter word with limited guesses. Here's a Python program that can help solve Wordle puzzles:
 
-```text
+```python
 import random
 
 def get_word():
