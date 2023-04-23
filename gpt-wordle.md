@@ -89,3 +89,21 @@ Congratulations, you win!
 ```
 
 The program ran successfully to completion (a win), but still had some fault logic surrounding the "bulls" and "cows". In the penultimate guess, "apple", the response tells the user there are "1 bulls, 3 cows", but that's not 100% correct. Knowing the correct guess is "grape", we can tell the bull is the "e", which is the correct letter in the correct position. However, there are technically only two "cows", the "a" and one of the "p" letters. The word "grape" only has one "p", and in Worlde proper it would only report one of those letters as a cow, not both.
+
+On a successful run to completion that's a loss, it does what it's programmed to do, but this highlights the flaws noted earlier about not checking if the word has already been guessed. I guess the silver lining is that it makes it easier to speedrun a loss.
+
+```text
+$ ./gpt-wordle.py 
+Welcome to Wordle!
+Guess a five-letter word: mario
+0 bulls, 1 cows
+Guess a five-letter word: mario
+0 bulls, 1 cows
+Guess a five-letter word: mario
+0 bulls, 1 cows
+Guess a five-letter word: mario
+0 bulls, 1 cows
+Guess a five-letter word: mario
+0 bulls, 1 cows
+Sorry, you lose! The word was peach.
+```
