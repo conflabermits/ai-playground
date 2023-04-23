@@ -72,3 +72,20 @@ IndexError: string index out of range
 ```
 
 The error occurs because the length of the guess ("kiwi", 4 letters) did not match the length of the word ("apple", 5 letters). The program tries to iterate over the length of the word (`range(0, 5)`, or `0` through `4`) and trips over itself when it reaches index `4` because it doesn't exist on the guess word.
+
+After adjusting the `word_list` array to only contain 5-letter words, the program ran successfully:
+
+```text
+$ ./gpt-wordle.py 
+Welcome to Wordle!
+Guess a five-letter word: lemon
+0 bulls, 1 cows
+Guess a five-letter word: melon
+0 bulls, 1 cows
+Guess a five-letter word: apple
+1 bulls, 3 cows
+Guess a five-letter word: grape
+Congratulations, you win!
+```
+
+The program ran successfully to completion (a win), but still had some fault logic surrounding the "bulls" and "cows". In the penultimate guess, "apple", the response tells the user there are "1 bulls, 3 cows", but that's not 100% correct. Knowing the correct guess is "grape", we can tell the bull is the "e", which is the correct letter in the correct position. However, there are technically only two "cows", the "a" and one of the "p" letters. The word "grape" only has one "p", and in Worlde proper it would only report one of those letters as a cow, not both.

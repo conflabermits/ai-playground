@@ -3,7 +3,7 @@ import random
 
 def get_word():
     # This function generates a random five-letter word from a list of words.
-    word_list = ["apple", "banana", "cherry", "grape", "kiwi", "lemon", "melon", "orange", "peach", "pear"]
+    word_list = ["apple", "grape", "lemon", "melon", "peach"]
     return random.choice(word_list)
 
 def check_guess(word, guess):
