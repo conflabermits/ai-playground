@@ -70,3 +70,5 @@ Traceback (most recent call last):
     if word[i] == guess[i]:
 IndexError: string index out of range
 ```
+
+The error occurs because the length of the guess ("kiwi", 4 letters) did not match the length of the word ("apple", 5 letters). The program tries to iterate over the length of the word (`range(0, 5)`, or `0` through `4`) and trips over itself when it reaches index `4` because it doesn't exist on the guess word.
